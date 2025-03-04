@@ -1,0 +1,57 @@
+/* General styling */
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  list-style-type: none;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  margin: 0;
+}
+
+/* Styling for each navigation item */
+.nav-li {
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styling for the links */
+.nav-link {
+  text-decoration: none; 
+  color: white; 
+  font-family:'Segoe UI';
+  font-size: 10px;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #095883; 
+  transform: scale(1.1);
+}
+
+/* Active link styling */
+.nav-link:active {
+  color:black; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10%;
+  }
+
+  .nav-li {
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-link {
+      font-size: 10px;
+  }
+}
