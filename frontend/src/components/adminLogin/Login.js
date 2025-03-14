@@ -45,7 +45,7 @@ function Login() {
         <h2 className='auth-header'>Admin Login</h2>
         <form onSubmit={handleSubmit}>
             <input className='form-input' type="text" name="username" placeholder="Username" onChange={handleChange} value={user.username} required />
-            <input className='form-input' type="text" name="password" placeholder="Password" onChange={handleChange} value={user.password} required />
+            <input className='form-input' type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required />
             <button className = 'auth-button' type="submit">Login</button>
             <Link to = "/register" className='auth-link'>
                 <p>Create new account</p>

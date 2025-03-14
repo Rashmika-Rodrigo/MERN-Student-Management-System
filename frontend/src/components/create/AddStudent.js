@@ -27,8 +27,8 @@ function AddStudent() {
   return (
     <div>
       <Nav />
-      <div className="container">
-      <h2>Add Student</h2>
+      <div className="add-student-container">
+      <h2 className="page-title">Add Student</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" name="studentID" placeholder="Student ID" onChange={handleChange} required />
         <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
