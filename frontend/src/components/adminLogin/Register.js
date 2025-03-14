@@ -32,8 +32,8 @@ function Register() {
         <form onSubmit={handleSubmit}>
             <input className='form-input' type="text" name="name" placeholder="Name" onChange={handleChange}  required />
             <input className='form-input' type="text" name="username" placeholder="Username" onChange={handleChange}  required />
-            <input className='form-input' type="text" name="password" placeholder="Create a password" onChange={handleChange}  required />
-            <input className='form-input' type="text" name="repassword" placeholder="Re-enter password" onChange={handleChange}  required />
+            <input className='form-input' type="password" name="password" placeholder="Create a password" onChange={handleChange}  required />
+            <input className='form-input' type="password" name="repassword" placeholder="Confirm password" onChange={handleChange}  required />
             <button className = 'auth-button' type="submit">Create</button>
             <Link to = "/login" className='auth-link'>
                 <p>Already have an account? Login</p>

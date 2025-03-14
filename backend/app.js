@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/students", router);
 
-mongoose.connect("")
+mongoose.connect("mongodb+srv://admin:SwYFJCFEo8A9aFri@cluster0.4oxvl.mongodb.net/") // pass: SwYFJCFEo8A9aFri
 .then(() => console.log("Connected to mongoDB"))
 .then(() => {
     app.listen(5000);

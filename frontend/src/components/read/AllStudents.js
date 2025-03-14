@@ -32,8 +32,8 @@ function AllStudents() {
   return (
     <div>
       <Nav />
-      <div className="container">
-      <h2>All Students</h2>
+      <div className="all-student-container">
+      <h2 className="page-title">All Students</h2>
       <table>
         <thead>
           <tr>
