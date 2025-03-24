@@ -20,7 +20,7 @@ function AddStudent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:5000/students", student);
-    window.alert("Student added successfully!")
+    window.alert("Student added successfully!");
     navigate("/allStudents");
   };
 
@@ -28,16 +28,54 @@ function AddStudent() {
     <div>
       <Nav />
       <div className="add-student-container">
-      <h2 className="page-title">Add Student</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="studentID" placeholder="Student ID" onChange={handleChange} required />
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-        <input type="text" name="mobile" placeholder="Mobile" onChange={handleChange} required />
-        <input type="text" name="address" placeholder="Address" onChange={handleChange} required />
-        <button className="add-button" type="submit">Add</button>
-      </form>
-    </div>
+        <h2 className="page-title">Add Student</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="studentID"
+            placeholder="Student ID"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="mobile"
+            placeholder="Mobile"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            onChange={handleChange}
+            required
+          />
+          <button className="add-button" type="submit">
+            Add
+          </button>
+        </form>
+      </div>
+      <footer className="home-footer">
+        <p>
+          © 2025 Student Management System by W.D.R. Rashmika Rodrigo. All
+          rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }
