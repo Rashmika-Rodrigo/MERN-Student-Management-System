@@ -15,7 +15,7 @@ const getAllStudents = async (req, res, next) => {
 
     // if no students - error msg
     if(!students){
-        return res.status(404).json({message: "Error: Students not found"});
+        return res.status(404).json({message: "Error: Students not found!.."});
     }
     // else - success msg
     return res.status(200).json({students});
@@ -40,7 +40,7 @@ const addStudents = async (req, res, next) => {
 
     // if unable - error msg
     if(!students){
-        return res.status(404).json({message: "Error: Unable to add the Student"});
+        return res.status(404).json({message: "Error: Unable to add the Student!.."});
     }
     // else - success msg
     return res.status(200).json({students});
@@ -64,7 +64,7 @@ const getStudentsById = async (req, res, next) => {
 
     // if unable - error msg
     if(!students){
-        return res.status(404).json({message: "Error: Student not found"});
+        return res.status(404).json({message: "Error: Student not found!.."});
     }
     // else - success msg
     return res.status(200).json({students});
@@ -84,7 +84,7 @@ const updateStudents = async (req, res, next) => {
         students = await student.findByIdAndUpdate(id,
             {studentID : studentID, name : name, email : email, mobile : mobile, address : address}
         );
-        students = await students.save(); // students.save()
+        students = await students.save(); 
     }
     catch(err){
         console.log(err);
@@ -92,7 +92,7 @@ const updateStudents = async (req, res, next) => {
 
     // if unable - error msg
     if(!students){
-        return res.status(404).json({message: "Error: Unable to update the Student"});
+        return res.status(404).json({message: "Error: Unable to update the Student!.."});
     }
     // else - success msg
     return res.status(200).json({students});
@@ -116,7 +116,7 @@ const deleteStudents = async (req, res, next) => {
 
     // if unable - error msg
     if(!students){
-        return res.status(404).json({message: "Error: Unable to delete the Student"});
+        return res.status(404).json({message: "Error: Unable to delete the Student!.."});
     }
     // else - success msg
     return res.status(200).json({students});
